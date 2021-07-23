@@ -27,5 +27,9 @@ namespace VendorTracker.Models
     {
       return _ordersList;
     }
+    public static Order Find(int Id)
+    {
+      return _ordersList[Id - 1];
+    }
   }
 }

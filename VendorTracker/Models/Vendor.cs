@@ -25,5 +25,9 @@ namespace VendorTracker.Models
     {
       return _vendorsList;
     }
+    public static Vendor Find(int searchId)
+    {
+      return _vendorsList[searchId - 1];
+    }
   }
 }
