@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace TrackVendor.Models
+namespace VendorTracker.Models
 {
   public class Vendor
   {

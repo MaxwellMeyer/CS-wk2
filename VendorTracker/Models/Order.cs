@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace TrackVendor.Models
+namespace VendorTracker.Models
 {
   public class Order
   {
@@ -17,6 +17,15 @@ namespace TrackVendor.Models
       Price = price;
       Id = _ordersList.Count + 1;
       _ordersList.Add(this);
+    }
+
+    public static void ClearAll()
+    {
+      _ordersList.Clear();
+    }
+    public static List<Order> GetAll()
+    {
+      return _ordersList;
     }
   }
 }
