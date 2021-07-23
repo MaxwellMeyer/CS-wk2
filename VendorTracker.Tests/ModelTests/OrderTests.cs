@@ -27,7 +27,6 @@ namespace VendorTracker.Tests
       Order newOrder = new Order("The Company", "Stuff", 444);
       string result = newOrder.Company;
       Assert.AreEqual(testOrderCompany, "stuff");
-
     }
   }
 }
