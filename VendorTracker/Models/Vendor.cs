@@ -15,7 +15,15 @@ namespace TrackVendor.Models
       Id = _vendorsList.Count + 1;
       _vendorsList.Add(this);
       Orders = new List<Order> { };
+    }
 
+    public static void ClearAll()
+    {
+      _vendorsList.Clear();
+    }
+    public static List<Vendor> GetAll()
+    {
+      return _vendorsList;
     }
   }
 }
