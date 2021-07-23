@@ -29,5 +29,10 @@ namespace VendorTracker.Models
     {
       return _vendorsList[searchId - 1];
     }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }
