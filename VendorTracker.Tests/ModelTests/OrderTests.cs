@@ -28,5 +28,17 @@ namespace VendorTracker.Tests
       string result = newOrder.Company;
       Assert.AreEqual(testOrderCompany, "stuff");
     }
+[TestMethod]
+    public void Find_CorrectlyReturnsOrder_Order()
+    {
+    
+      Order anOrder = new Order("a company", "a description", 345);
+      Order anotherOrder = new Order("nike", "some shoes", 687);
+
+      Order result = Order.Find(1);
+
+      Assert.AreEqual(anOrder, result);
+    }
+
   }
 }
