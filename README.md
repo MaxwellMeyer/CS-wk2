@@ -8,6 +8,7 @@
 
 - _C# 9.0_
 - _.NET 5.0_
+- _ASP.NET Core MVC_
 - _MSTEST_
 
 ## Description
