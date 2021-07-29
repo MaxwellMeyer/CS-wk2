@@ -29,5 +29,30 @@ namespace VendorTracker.Tests
 
       Assert.AreEqual(vendorCompany, result);
     }
+[TestMethod]
+    public void Find_CorrectlyReturnsVendor_Vendor()
+    {
+    
+      Vendor newVendor = new Vendor("a company");
+      Vendor anotherVendor = new Vendor("nike");
+
+      Vendor result = Vendor.Find(1);
+
+      Assert.AreEqual(newVendor, result);
+    }
+[TestMethod]
+    public void AddOrder_AddsOrderToVendor_OrderList()
+    {
+      
+      Order anOrder = new Order("a company", "a description", 345);
+      List<Order> theList = new List<Order> { anOrder };
+      
+      Vendor newVendor = new Vendor("worlds greatest VENDOR");
+      newVendor.AddOrder(anOrder);
+      List<Order> theResult = newVendor.Orders;
+
+    
+      CollectionAssert.AreEqual(theList, theResult);
+    }
   }
 }
