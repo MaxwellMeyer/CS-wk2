@@ -39,6 +39,5 @@ namespace VendorTracker.Tests
 
       Assert.AreEqual(anOrder, result);
     }
-
   }
 }
